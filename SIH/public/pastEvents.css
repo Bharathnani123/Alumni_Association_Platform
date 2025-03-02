@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color for the page */
+}
+
+/* Container for all events */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* White background for content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5em;
+    color: #333; /* Dark gray color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out; /* Animation for heading */
+}
+
+/* Event Box Styles */
+.event {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9; /* Light gray background for each event */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 20px;
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+/* Event Image Styles */
+.event-img {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.event-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+}
+
+/* Event Details Styles */
+.event-details {
+    flex: 2;
+}
+
+.event-details h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.event-details p {
+    font-size: 1em;
+    color: #666; /* Light gray color for text */
+    margin: 15px 0;
+}
+
+.event-details a.register-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff; /* Blue background color for button */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for button */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+.event-details a.register-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover effect for event boxes */
+.event:hover {
+    transform: scale(1.02); /* Slightly larger on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}

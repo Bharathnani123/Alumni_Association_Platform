@@ -1,0 +1,32 @@
+/* styles.css */
+.mentor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.mentor-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.mentor-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.mentor-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.mentor-card p {
+    margin: 5px 0;
+}

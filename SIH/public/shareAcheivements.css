@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.achievement-summary {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.achievement-summary:hover {
+    transform: scale(1.02);
+}
+
+.achievement-title {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.alumni-name {
+    font-size: 18px;
+    color: #555;
+}
+
+.brief-summary {
+    color: #777;
+}
+
+.view-more {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-more:hover {
+    background-color: #0056b3;
+}
+
+.achievement-details {
+    margin-top: 15px;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.like-section {
+    margin-top: 10px;
+}
+
+.like-btn {
+    background-color: #ff4757;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background-color: #e84118;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-btn:hover {
+    background-color: #218838;
+}
+
+.tag-section {
+    margin-top: 10px;
+}
+
+.tag-input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tag-btn {
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tag-btn:hover {
+    background-color: #138496;
+}

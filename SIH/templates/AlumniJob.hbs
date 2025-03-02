@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job Details</title>
+    <link rel="stylesheet" href="Alumnijob.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post a New Job</h1>
+        <form id="jobPostForm">
+            <div class="form-group">
+                <label for="title">Job Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="img">Image URL:</label>
+                <input type="text" id="img" name="img" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eligibility">Eligibility:</label>
+                <textarea id="eligibility" name="eligibility" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="package">Package:</label>
+                <input type="text" id="package" name="package" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jobType">Job Type:</label>
+                <input type="text" id="jobType" name="jobType" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastDate">Last Date to Apply:</label>
+                <input type="date" id="lastDate" name="lastDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="registrationLink">Registration Link:</label>
+                <input type="url" id="registrationLink" name="registrationLink" required>
+            </div>
+
+            <div class="form-group">
+                <label for="postedBy">Posted By:</label>
+                <input type="text" id="postedBy" name="postedBy" required>
+            </div>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+    <script src="AlumniJob.js"></script>
+</body>
+</html>

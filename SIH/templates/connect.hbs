@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="connect.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Alumni Chat System</h1>
+    </header>
+
+    <main>
+        <h2>Alumni Chat</h2>
+        <div id="alumniList">
+            <h3>Alumni List</h3>
+            <ul id="alumniUl">
+                <!-- Alumni list items will be dynamically inserted here -->
+            </ul>
+        </div>
+        <div id="chatBox" class="hidden">
+            <div class="chat-header">
+                <span id="chatWith">Chat with:</span>
+                <button id="closeChat">X</button>
+            </div>
+            <div id="chatContent" class="chat-content"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alumni Association</p>
+    </footer>
+
+    <!-- Load Socket.io client library from the server -->
+    <script id="data"  type="application/json" src="/socket.io/socket.io.js"></script>
+    <!-- Load your custom script -->
+    <script src="connect.js"></script>
+</body>
+</html>

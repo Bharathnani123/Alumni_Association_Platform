@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="homestd.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.BjEx5m0e19xmMGEGuvySGgHaEc&pid=Api&P=0&h=180"
+                alt="Library Logo">
+        </div>
+        <div class="NewBooks">
+            <button type="menu" onclick="bookNowN()">NewBooks</button>
+        </div>
+        <div class="magzines">
+            <button type="menu" onclick="bookNowM()">Magazines</button>
+        </div>
+        <div class="Journals">
+            <button type="menu" onclick="bookNowJ()">Journals</button>
+        </div>
+        <div class="ProjectsResearch">
+            <button type="menu" onclick="bookNowP()">Projects/Research</button>
+        </div>
+
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenu()"><box-icon name='menu' animation='spin' color='rgba(0,0,0,0.97)' ></box-icon></span>
+            <div class="menu-options" id="menuOptions">
+                <div class="profile">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.Z306v3XdxhOaxBFGfHku7wHaHw&pid=Api&P=0&h=180"
+                        alt="Profile">
+                    <br>
+                    <h3><span id="display-name">{{ displayName }}</span></h3>
+                </div>
+                <ul>
+                    <li><box-icon name='book'></box-icon></box-icon>
+                        <a href="Book-Lended">Books Lended</a>
+                    </li>
+                    <li><box-icon name='question-mark' color='#101011'></box-icon><a href="Book-requests">Requests
+                            Status</a></li>
+                    <li><box-icon type='solid' name='bank'></box-icon><a href="StdFines">Fines</a></li>
+                    
+                    <li><box-icon name='book'></box-icon></box-icon>
+                        <a href="SubmitBooks">Submitted Books</a>
+                    <li><box-icon type='solid' name='book-open'></box-icon>
+                        <a href="RequestForNew">Request For Book</a>
+                    
+                    <li><box-icon name='log-out' color='#101011'></box-icon><a href="start">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="search-head">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchBooks()">Search</button>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+        <div class="book-box">
+            <div id="suggestions1"></div>
+            <div id="NewBook1"></div>
+            <div id="magzine1"></div>
+            <div id="Journal1"></div>
+            <div id="Projects1"></div>
+        </div>
+    </main>
+
+    <script src="homestd.js"></script>
+
+</body>
+
+</html>

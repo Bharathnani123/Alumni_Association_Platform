@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Students Profiles</title>
+    <link rel="stylesheet" href="SuccessProfile.css">
+</head>
+
+<body>
+    <div class="profiles-wrapper">
+        <h1 class="profiles-heading">Profiles of Successful Students</h1>
+        <div class="profiles-container">
+            {{#each profiles}}
+            <div class="profile-item">
+                <img src="{{this.profilePhoto}}" alt="{{this.fullName}}" class="profile-image">
+                <div class="profile-details">
+                    <h2 class="profile-name">{{this.fullName}}</h2>
+                    <p class="profile-batch">Batch: {{this.batch}}</p>
+                    <p class="profile-achievement">Achievement: {{this.achievement}}</p>
+                    <p class="profile-description">{{this.description}}</p>
+                    <p class="profile-location">Location: {{this.location}}</p>
+                    <p class="profile-contact">Contact: {{this.contact}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
+</body>
+
+</html>

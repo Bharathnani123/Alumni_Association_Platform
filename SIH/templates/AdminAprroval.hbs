@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Requests</title>
+    <style>
+        .user-details {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .user-details img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+        .user-details a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .approve-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .approve-btn:hover {
+            background-color: #218838;
+        }
+        .email-box, .key-box {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="request-container">
+    <h1>Pending Alumni Requests</h1>
+    <div id="requests"></div>
+</div>
+
+<script>
+    // Main function to fetch and display requests
+async function fetchRequests() {
+    const response = await fetch('/pending');
+    const requests = await response.json();
+    const requestContainer = document.getElementById('requests');
+
+    requests.forEach(request => {
+        const div = document.createElement('div');
+        div.classList.add('user-details');
+        div.innerHTML = `
+            <p><strong>Full Name:</strong> ${request.fullName}</p>
+            <p><strong>Email:</strong> ${request.email}</p>
+            <p><strong>Roll Number:</strong> ${request.rollNumber}</p>
+            <p><strong>Batch Year:</strong> ${request.batchYear}</p>
+            <p><strong>Department:</strong> ${request.department}</p>
+            <p><strong>Phone Number:</strong> ${request.phoneNumber}</p>
+
+            <!-- Display Image -->
+            <p><strong>Image:</strong></p>
+            <img src="/uploads/${request.image}" alt="Alumni Image">
+            
+            <!-- Display Document with Download Link -->
+            <p><strong>Document:</strong></p>
+            <a href="/uploads/${request.document}" download>Download Document</a>
+
+            <button class="approve-btn" onclick="approveUser('${request._id}', '${request.email}')">Approve</button>
+        `;
+        requestContainer.appendChild(div);
+    });
+}
+
+// Approve user function that calls backend to send approval email
+async function approveUser(userId, email) {
+    try {
+        const response = await fetch('/approve', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, email })
+        });
+
+        const result = await response.json();
+        alert(result.message);
+    } catch (error) {
+        console.error('Error approving user:', error);
+        alert('An error occurred during approval.');
+    }
+}
+
+// Initial call to fetch and display requests
+fetchRequests();
+
+</script>
+
+</body>
+</html>

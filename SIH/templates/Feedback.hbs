@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Association Feedback Form</title>
+    <link rel="stylesheet" href="Feedback.css">
+</head>
+<body>
+    <div class="feedback-container">
+        <h1>Alumni Association Feedback Form</h1>
+
+        <form id="feedbackForm">
+            <!-- Personal Information (Optional) -->
+            <h2>Personal Information (Optional)</h2>
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <input type="text" id="batchYear" name="batchYear" placeholder="Batch Year">
+            </div>
+            <div class="form-group">
+                <input type="text" id="department" name="department" placeholder="Department">
+            </div>
+
+            <!-- Feedback Categories -->
+            <h2>Event Feedback</h2>
+            <div class="form-group">
+                <label>Rate the recent events:</label>
+                <input type="number" name="eventRating" min="1" max="5" placeholder="1-5">
+            </div>
+            <div class="form-group">
+                <textarea name="eventSuggestions" placeholder="Event suggestions"></textarea>
+            </div>
+
+            <h2>Website Usability</h2>
+            <div class="form-group">
+                <label>Rate the website:</label>
+                <input type="number" name="websiteRating" min="1" max="5" placeholder="1-5">
+            </div>
+            <div class="form-group">
+                <textarea name="websiteIssues" placeholder="Any website issues?"></textarea>
+            </div>
+
+            <h2>Communication</h2>
+            <div class="form-group">
+                <label>Rate the communication:</label>
+                <input type="number" name="communicationRating" min="1" max="5" placeholder="1-5">
+            </div>
+            <div class="form-group">
+                <textarea name="communicationSuggestions" placeholder="Suggestions for better communication"></textarea>
+            </div>
+
+            <h2>Suggestions for Future Initiatives</h2>
+            <div class="form-group">
+                <textarea name="futureInitiatives" placeholder="Your suggestions"></textarea>
+            </div>
+
+            <h2>Overall Satisfaction</h2>
+            <div class="form-group">
+                <label>Overall rating:</label>
+                <input type="number" name="overallRating" min="1" max="5" placeholder="1-5">
+            </div>
+
+            <!-- Open Feedback Section -->
+            <div class="form-group">
+                <textarea name="openFeedback" placeholder="Any other comments?"></textarea>
+            </div>
+
+            <!-- Recommend and Contact Permission -->
+            <div class="form-group">
+                <label>Would you recommend the association?</label>
+                <input type="checkbox" name="recommend"> Yes
+            </div>
+            <div class="form-group">
+                <label>Would you like to be contacted about your feedback?</label>
+                <input type="checkbox" name="contactPermission"> Yes
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+            <p id="form-message"></p>
+        </form>
+    </div>
+
+    <script src="Feedback.js"></script>
+</body>
+</html>

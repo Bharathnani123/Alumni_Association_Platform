@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events</title>
+    <link rel="stylesheet" href="/pastEvents.css">
+
+</head>
+<body>
+    <div class="event-container">
+        {{#each events}}
+        <div class="event">
+            <div class="event-img">
+                <img src="{{this.img}}" alt="{{this.title}}">
+            </div>
+            <div class="event-details">
+                <h2>{{this.title}}</h2>
+                <p><strong>Venue:</strong> {{this.venue}}</p>
+                <p><strong>Date:</strong> {{this.Date}}</p>
+                <p><strong>Time:</strong> {{this.time}}</p>
+                <p>{{this.Description}}</p>
+                <a href="{{this.register}}" class="register-btn">Register</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>

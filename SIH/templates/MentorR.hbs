@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease;
+        }
+
+        .modal-content {
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mentorRegisterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register as a Mentor</h2>
+            <form id="mentorRegisterForm">
+                <input type="text" placeholder="Name" id="mentorName" required>
+                <input type="email" placeholder="Email" id="mentorEmail" required>
+                <input type="text" placeholder="Department" id="mentorDepartment" required>
+                <textarea placeholder="Guidance Areas (comma-separated)" id="mentorGuidanceAreas"></textarea>
+                <input type="file" id="mentorProfileImage">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Show Mentor Registration Modal
+        const mentorRegisterModal = document.getElementById("mentorRegisterModal");
+        document.getElementById("mentorRegisterButton").addEventListener("click", () => {
+            mentorRegisterModal.style.display = "block";
+        });
+
+        // Close Mentor Registration Modal
+        document.getElementsByClassName("close")[0].onclick = function () {
+            mentorRegisterModal.style.display = "none";
+        };
+
+        // Submit Mentor Registration Form
+        document.getElementById("mentorRegisterForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const mentorData = {
+                name: document.getElementById("mentorName").value,
+                email: document.getElementById("mentorEmail").value,
+                department: document.getElementById("mentorDepartment").value,
+                guidanceAreas: document.getElementById("mentorGuidanceAreas").value.split(','),
+                profileImage: document.getElementById("mentorProfileImage").files[0] // Assuming file handling is done server-side
+            };
+
+            const response = await fetch('/api/mentors/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(mentorData)
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert("Mentor Registered Successfully!");
+                mentorRegisterModal.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

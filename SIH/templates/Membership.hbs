@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Page</title>
+  <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+  <header>
+    <h1>Membership Guide</h1>
+    <nav>
+      <ul>
+        <li><a href="#alumni">Alumni Portal</a></li>
+        <li><a href="#student">Student Portal</a></li>
+        <li><a href="#staff">Staff Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>Welcome to the Membership Page</h2>
+    <p>Here, we will guide you on how to access and register in the Alumni, Student, and Staff portals. Click on the respective sections for more details.</p>
+  </section>
+
+  <section id="alumni" class="portal-section">
+    <h2>Alumni Portal</h2>
+    <p>The Alumni Portal allows alumni to connect, access resources, and join events.</p>
+    <button onclick="toggleInfo('alumniInfo')">How to Register</button>
+    <div id="alumniInfo" class="info" style="display: none;">
+      <p>1. Click on the 'Register' button on the Alumni Portal page.</p>
+      <p>2. Fill in your graduation year, program, and personal details.</p>
+      <p>3. Submit the form and You are Done.</p>
+    </div>
+  </section>
+
+  <section id="student" class="portal-section">
+    <h2>Student Portal</h2>
+    <p>The Student Portal provides current students with access to academic resources and career services.</p>
+    <button onclick="toggleInfo('studentInfo')">How to Register</button>
+    <div id="studentInfo" class="info" style="display: none;">
+      <p>1. Click on the 'Register' button on the Student Portal page.</p>
+      <p>2. Enter your student ID and other required details.</p>
+      <p>3. Submit the form and You are Done.</p>
+    </div>
+  </section>
+
+  <section id="staff" class="portal-section">
+    <h2>Staff Portal</h2>
+    <p>The Staff Portal enables faculty and staff to manage academic activities and student records.</p>
+    <button onclick="toggleInfo('staffInfo')">How to Register</button>
+    <div id="staffInfo" class="info" style="display: none;">
+      <p>1. Go to the Staff Portal and click 'Register'.</p>
+      <p>2. Enter your staff ID and department information.</p>
+      <p>3. Complete the registration by submitting the form and You are Done.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Alumni Association. All rights reserved.</p>
+  </footer>
+
+  <script src="membership.js"></script>
+</body>
+</html>

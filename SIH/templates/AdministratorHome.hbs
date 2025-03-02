@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBIT | Alumni Association Platform</title>
+    <link rel="stylesheet" href="AdministratorHome.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.FMYqaQYIZGlFhT2YF4ucXQAAAA&pid=Api&P=0&h=180"
+                    alt="College Logo" class="logo">
+                <span class="college-name">CBIT |</span>
+                <span class="subtitle">Alumni Association Platform</span>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#">Profile Management</a></li>
+                <li><a href="AdminAprroval">Approve Requests</a></li>
+                <li><a href="#">Event Management</a></li>
+                <li><a href="Success">Posting Success Stories</a></li>
+                <li><a href="SemdMA">Send Messages</a></li>
+                <li><a href="AdminDonate">Donations Management</a></li>
+                <li><a href="postLatest">Posting Latest Updates</a></li>
+                <li><a href="#">Feedback Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-message">
+            <h1>Welcome, {{AdminName}}</h1>
+            <p>Manage all platform activities from this centralized system.</p>
+        </div>
+
+        <!-- Main content goes here -->
+        <div class="content-sections">
+            <!-- Mentor Profiles Section -->
+            <div class="section mentor-profiles">
+                <h2>Groups</h2>
+                <div class="mentor-section">
+                    <a href="#" id="view-groups">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.BI7JTBI2cTFiGSen2aDjTAHaEK&pid=Api&P=0&h=180"
+                            alt="Mentor" class="profile-img" height="300" width="600">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Job Postings Section -->
+            <div class="section job-postings">
+                <h2>Latest Updates</h2>
+                <a href="latestUpdate" class="image-link">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.WBSGDq9D2CxrzDs-Mw2yBAHaEX&pid=Api&P=0&h=180"
+                        alt="Payment Image" class="profile-img" height="300" width="600">
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="content-sections">
+            <!-- Mentor Profiles Section -->
+            <div class="section mentor-profiles">
+                <h2>Acheivements</h2>
+                <div class="mentor-section">
+                    <a href="displayAcheivements">
+                        <img src="https://quotefancy.com/media/wallpaper/3840x2160/2093344-Denis-Waitley-Quote-The-greatest-achievement-is-to-outperform.jpg"
+                            alt="Mentor" class="profile-img" height="300" width="600">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Job Postings Section -->
+            <div class="section mentor-profiles">
+                <h2>Mentor Profiles</h2>
+                <div class="mentor-section">
+                    <a href="javascript:void(0);" onclick="openMentorPopup()">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.uCpewbBBr7qksW_IM73gSQHaEA&pid=Api&P=0&h=180"
+                            alt="Mentor" class="profile-img" height="300" width="600">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+        <!-- Mentor popup -->
+        <div id="mentor-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeMentorPopup()">&times;</span>
+                <h2>Mentor Profiles</h2>
+                <div id="mentor-container" class="mentor-container">
+                    <!-- Mentor profiles will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal for displaying groups -->
+        <div id="groupsModal" class="modal">
+            <div class="modal-content">
+                <span id="closeGroupsList" class="close">&times;</span>
+                <h2>Available Groups</h2>
+                <div id="groupsContainer"></div> <!-- Container for scrolling content -->
+            </div>
+        </div>
+
+    </main>
+
+    <script src="AdministratorHome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+/* Interviews.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.interviews-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.interviews-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.interviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.interview-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.interview-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.interview-details {
+    padding: 15px;
+}
+
+.interview-title {
+    font-size: 24px;
+    color: #007bff;
+    margin: 0;
+}
+
+.interview-date,
+.interview-summary {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.interview-video-wrapper {
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+}
+
+.interview-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+@media (forced-colors: active) {
+    /* Define styles for forced colors mode */
+    body {
+        background: window;
+        color: windowText;
+    }
+}

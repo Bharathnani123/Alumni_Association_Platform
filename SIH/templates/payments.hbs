@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <link rel="stylesheet" href="payments.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payments</h1>
+        </header>
+        <div class="content-container">
+            <div class="content">
+                <div class="image-container">
+                    <img src="scanner.jpg" alt="CBIT" width="400" height="600">
+                </div>
+            </div>
+            <aside class="sidebar">
+                <p style="font-weight: bold;">
+                    To make online donations/ payment of membership fee, you can scan the given UPI QR Codes and make the payments.
+                    For any queries please contact
+                </p>
+                <p>
+                    CBIT Alumni Association,<br>
+                    Chaitanya Bharathi Institute of Technology<br>
+                    Hyderabad.<br>
+                    <br>
+                    <span style="font-weight: bold;">Work Timings:</span><br>
+                    Monday to Friday : 10.00 A.M. to 5.00 P.M.<br>
+                    Saturday : 10.00 A.M. to 1.00 P.M.<br>
+                    <br>
+                    Gandipet, Hyderabad, Telangana,<br>
+                    PIN : 500075<br>
+                    Phone: 040-24193276<br>
+                    Mobile: 8466997201<br>
+                    For Admissions Enquiry: 8466997216<br>
+                    Email: principal@cbit.ac.in
+                </p>
+            </aside>
+        </div>
+
+        <!-- Payment Form Section -->
+        <div id="paymentFormContainer" class="payment-form-container hidden">
+            <div class="payment-form">
+                <h2>Payment Details Form</h2>
+                <form id="paymentForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" required>
+
+                    <label for="screenshot">Upload Payment Screenshot:</label>
+                    <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+
+                    <button type="submit">Submit Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <button id="fillFormButton" class="fill-form-button">Fill Form</button>
+
+    <footer>
+        <p>&copy; 2024 CBIT. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Event</title>
+    <link rel="stylesheet" href="Eventsupload.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Upload Event</h1>
+        <form id="uploadEventForm" action="/events/upload" method="POST" enctype="multipart/form-data">
+            <label for="title">Event Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="img">Event Image URL:</label>
+            <input type="text" id="img" name="img" required>
+
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required>
+
+            <label for="Date">Date:</label>
+            <input type="date" id="Date" name="Date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="Description">Description:</label>
+            <textarea id="Description" name="Description" rows="4" required></textarea>
+
+            <label for="register">Registration Link:</label>
+            <input type="url" id="register" name="register" required>
+
+            <button type="submit">Upload Event</button>
+        </form>
+    </div>
+</body>
+</html>

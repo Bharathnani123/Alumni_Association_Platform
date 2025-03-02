@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="MentorProfiles.css">
+</head>
+
+<body>
+    <!-- views/mentorprofile.hbs -->
+<h1>Mentor Profiles</h1>
+<div class="mentor-container">
+    {{#each mentors}}
+    <div class="mentor-card">
+        <img src="{{this.profileImage}}" alt="{{this.name}}" class="mentor-image">
+        <h2>{{this.name}}</h2>
+        <p><strong>Email:</strong> {{this.email}}</p>
+        <p><strong>department:</strong> {{this.department}}</p>
+        <p><strong>AreasOfGuidance:</strong> {{this.areasOfGuidance}}</p>
+        
+    </div>
+    {{/each}}
+</div>
+</body>
+
+</html>
