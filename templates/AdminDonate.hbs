@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations Admin Page</title>
+    <link rel="stylesheet" href="AdminDonate.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Donations</h1>
+        </header>
+        <div class="content">
+            <h2>Total Donations: <span id="totalAmount">$0.00</span></h2>
+            <table id="donationsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Amount</th>
+                        <th>Screenshot</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Donation rows will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CBIT Alumni Association. All Rights Reserved.</p>
+    </footer>
+
+    <script src="AdminDonate.js"></script>
+</body>
+</html>

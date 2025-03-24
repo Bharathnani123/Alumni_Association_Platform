@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Aregister.css" />
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Confirm Your Identity</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <form action="/Aregister" method="post" id="checkForm">
+            <div class="input-container">
+                <h1 style="color: #939185;">CONFIRM <span>YOUR</span> </h1>
+                <h1>IDENTITY</h1>
+
+                <div class="input-group">
+                    <input id="rollNo" type="number" name="RollNo" required>
+                    <label for="rollNo">RollNo</label>
+                </div>
+
+                <div class="input-group">
+                    <input  id="fullName" type="text" name="FullName" required>
+                    <label for="fullName">FullName</label>
+                </div>
+
+                <div class="input-group">
+                    <input id="dateOfBirth" type="text" name="DateOfBirth" required>
+                    <label for="dateOfBirth">DateOfBirth:</label>
+                </div>
+                <div id="message"></div>
+
+                <button type="submit">Check</button>
+                <hr>
+            </div>
+        </form>
+    </body>
+
+    </html>
+    <script src="Aregister.js"></script>
+
+</body>
+
+</html>

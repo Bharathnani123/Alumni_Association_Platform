@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="SendMA.css">
+</head>
+<body>
+    <div class="send-message-container">
+    <h2>Send Message</h2>
+    <form id="sendMessageForm">
+        <textarea id="messageContent" placeholder="Enter your message" required></textarea>
+
+        <select id="messageType" required>
+            <option value="" disabled selected>Select recipient type</option>
+            <option value="all">All</option>
+            <option value="student">Students</option>
+            <option value="staff">Staff</option>
+            <option value="Alumni">Alumni</option>
+        </select>
+
+        <input type="text" id="department" placeholder="Enter department (optional)" />
+        <input type="text" id="batch" placeholder="Enter batch year (optional)" />
+        <input type="text" id="group" placeholder="Enter group (optional)" />
+        <input type="email" id="recipientEmail" placeholder="Enter recipient email (optional)" />
+
+        <button type="submit">Send Message</button>
+    </form>
+    <div id="messageSuccess" class="hidden">Message sent successfully!</div>
+</div>
+<script src="SendMA.js" ></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Map</title>
+    <link rel="stylesheet" href="Location.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="map-container">
+        <h1>Alumni Global Map</h1>
+        <div id="map"></div>
+        <div class="form-container">
+            <form id="locationForm">
+                <input type="text" id="alumniName" placeholder="Your Name" required />
+                <input type="text" id="alumniLocation" placeholder="Your Location (e.g., New York)" required />
+                <button type="submit">Mark Location</button>
+            </form>
+        </div>
+    </div>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="Location.js"></script>
+</body>
+</html>

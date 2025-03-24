@@ -1,0 +1,67 @@
+/* Profiles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.profiles-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profiles-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-details {
+    padding: 15px;
+}
+
+.profile-name {
+    font-size: 24px;
+    margin: 0;
+    color: #007bff;
+}
+
+.profile-batch,
+.profile-achievement,
+.profile-description,
+.profile-location,
+.profile-contact {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}

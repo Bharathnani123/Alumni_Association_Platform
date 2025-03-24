@@ -1,0 +1,341 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns items to the bottom of the navbar */
+    padding: 0.5rem 1rem; /* Adjust padding around the navbar */
+    background-color: #00509e;
+}
+
+.logo-container {
+    display: flex;
+    align-items:center /* Aligns logo and college name to the bottom */
+}
+
+.logo {
+    height: 120px; /* Adjust the logo size */
+    margin-right: 1rem;
+    margin-left: 2rem;
+}
+
+.college-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #E9C46A;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.menu {
+    position: relative;
+    margin-left: 1rem; /* Space between each menu item */
+}
+
+.menu .menu-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+.menu .menu-options {
+    display: none;
+    position: absolute;
+    top: 2rem; /* Positions the menu options directly below the menu item */
+    left: 0;
+    min-width: 10rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu .menu-options ul {
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.menu .menu-options li {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+
+}
+
+.menu .menu-options li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.menu .menu-options li a:hover {
+    color: #007bff;
+}
+
+.menu .menu-icon:hover + .menu-options,
+.menu-options:hover {
+    display: block;
+}
+.auth-links {
+    position: absolute;
+    top: 3rem; /* Adjusts the position from the top */
+    right: 23rem; /* Adjusts the position from the right */
+    display: flex;
+    align-items: center;
+    padding-right: 1rem; /* Adds padding from the right */
+    
+}
+
+.auth-links a {
+    color: #E9C46A;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    text-decoration: none; /* Removes text decoration */
+    font-size: 1.3rem;
+    font-family: playfair display;
+}
+
+.auth-links a:hover {
+    color: #007bff; /* Changes link color on hover */
+}
+
+.auth-links span {
+    margin: 0 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+.search-head{
+    margin-left:2rem;
+    margin-top: 1rem;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 3px;
+    background-color: #f0f0f0;
+    width: 90%;
+  }
+  
+  .search-bar button {
+    padding: 15px 15px;
+    background-color: #00509e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .img-button{
+    padding: 20px 40px;
+    margin-left: 20rem;
+    margin-top: -2rem;
+    background-color: #00509e;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+.college-content {
+    margin-top: 1rem;
+    padding: 2rem; /* Adds some padding around the content */
+    justify-content: center; /* Centers the content vertically */
+    background-image: url(bgimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image in the background */
+}
+
+
+.college-content h2 {
+    font-size: 3rem;
+    padding: 2rem;
+    margin-bottom: -3rem;
+    color: #699ec9;
+}
+
+.college-content p {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 2rem;
+    color: #000;
+}
+
+.payment-job-section {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.content-pair {
+    display: flex;
+    gap: 2rem; /* Adds space between the two sections */
+    max-width: 100%; /* Limits the width of the content to fit within the container */
+}
+
+.content-item, .job-posting-section {
+    flex: 1;
+    text-align: center; /* Centers the text and images */
+    padding: 1rem;
+    background-color: #f9f9f9; /* Adds a light background for better visibility */
+    border-radius: 8px; /* Rounds the corners of each section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.section-image {
+    width: 100%;
+    max-width: 600px; /* Ensures images are the same size */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 1.8rem; /* Consistent heading size */
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section p {
+    font-size: 1rem; /* Consistent paragraph size */
+    line-height: 1.5;
+    color: #555;
+    max-width: 90%;
+    margin: 0 auto; /* Centers the paragraph text */
+}
+section a{
+    cursor: pointer;
+}
+.Event {
+    padding: 20px;
+}
+
+.EventColumn {
+    margin-bottom: 20px; /* Add space between each event */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for better separation */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Event h2, .Event h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Event p {
+    margin: 10px 0;
+}
+
+.Event span {
+    font-weight: bold;
+    color: blue;
+}
+
+.alumni-container {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between alumni */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px; /* Add some space above the section */
+}
+
+.alumni {
+    flex: 1;
+    margin: 0 10px; /* Space between alumni cards */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for alumni section */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.alumni img {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 10px;
+}
+
+.alumni h3 {
+    margin: 10px 0;
+}
+
+.alumni p {
+    margin: 5px 0;
+}
+.gallery-container {
+    margin-top: 20px; /* Space above the gallery */
+    overflow: hidden; /* Hide overflow content */
+    white-space: nowrap; /* Prevent line breaks within the container */
+    width: 100%; /* Adjust to the container width */
+    position: relative;
+}
+
+.gallery-wrapper {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Animation for scrolling */
+}
+
+.gallery-item {
+    flex: 0 0 auto; /* Prevent shrinking and growing */
+    margin-right: 10px; /* Space between images */
+}
+
+.gallery-item img {
+    width: 400px; /* Adjust size as needed */
+    height: 300px;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.footer {
+    background-color: #405D72; /* Dark background for footer */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    min-height: 5rem;
+}
+
+.footer .social-links {
+    margin-bottom: 10px;
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer .social-links a:hover {
+    color: #f0f0f0; /* Light color on hover */
+}
+
+.footer .copyright {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.footer .copyright a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+

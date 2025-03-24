@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviews of Successful Students</title>
+    <link rel="stylesheet" href="SuccessInter.css">
+</head>
+
+<body>
+    <div class="interviews-wrapper">
+        <h1 class="interviews-heading">Interviews of Successful Students</h1>
+        <div class="interviews-container">
+            {{#each interviews}}
+            <div class="interview-item">
+                <div class="interview-details">
+                    <h2 class="interview-title">{{this.title}}</h2>
+                    <p class="interview-date">Date: {{this.interviewDate}}</p>
+                    <p class="interview-summary">{{this.summary}}</p>
+                </div>
+                <div class="interview-video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/{{this.videoUrl}}" class="interview-video" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
+</body>
+
+</html>

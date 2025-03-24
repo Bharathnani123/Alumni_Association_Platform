@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Latest Updates</title>
+    <link rel="stylesheet" href="postLatest.css">
+</head>
+<body>
+    <div class="latest-updates-container">
+        <h1>Post Latest Updates</h1>
+        <form id="latestUpdatesForm">
+            <input type="text" id="updateTitle" placeholder="Enter update title" required>
+            <textarea id="updateDescription" placeholder="Enter update description" required></textarea>
+            <input type="date" id="updateDate" required>
+            <button type="submit">Post Update</button>
+        </form>
+        <div id="updateSuccess" class="hidden">Update posted successfully!</div>
+    </div>
+
+    <script src="postLatest.js"></script>
+</body>
+</html>

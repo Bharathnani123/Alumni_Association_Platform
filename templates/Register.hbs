@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Register.css"/>
+</head>
+<body>
+    <form action="/Register" method="post" id="registerForm">
+        <div class="input-container">
+            <h1>CBIT</h1>
+            <h1 style="color: #939185;">Sign <span>In</span></h1>
+            <div class="input-group">
+                <input id="email" type="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <input id="password" type="password" name="password" required>
+                <label for="password">password</label>
+            </div>
+            <div id="message"></div>
+            <button type="submit">Sign In</button>
+            <hr>
+        </div>
+    </form>
+    <script src="Register.js"></script>
+</body>
+</html>

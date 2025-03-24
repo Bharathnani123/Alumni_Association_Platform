@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.FMYqaQYIZGlFhT2YF4ucXQAAAA&pid=Api&P=0&h=180"
+                alt="College Logo" class="logo">
+            <span class="college-name">CBIT |</span>
+            <span class="subtitle">Alumni Association Platform</span>
+        </div>
+
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenuA()">About</span>
+            <div class="menu-options" id="menuOptionsA">
+                <ul>
+                    <li><a href="overview">Overview</a></li>
+                    <li><a href="purpose">Purpose & Goal</a></li>
+                    <li><a href="presidents">President</a></li>
+                    <li><a href="mentorcommitee1">Mentor Committee</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenuE()">Events</span>
+            <div class="menu-options" id="menuOptionsE">
+                <ul>
+                    <li><a href="/events/past">Past Events</a></li>
+                    <li><a href="/events/upcome">Upcoming Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenuS()">Success Stories</span>
+            <div class="menu-options" id="menuOptionsS">
+                <ul>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/SuccessInter">Interviews</a></li>
+                    <li><a href="/Successprofile">Profiles</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenuN()">News</span>
+            <div class="menu-options" id="menuOptionsN">
+                <ul>
+                    <li><a href="latestUpdate">Latest Updates</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="menu-icon" onclick="toggleMenuM()">Membership</span>
+            <div class="menu-options" id="menuOptionsM">
+                <ul>
+                    <li><a href="Membership">About Membership</a></li>
+                    <li><a href="benefits">Benefits</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="auth-links">
+            <a href="twoStep" class="register-link">REGISTER</a>
+            <span>::</span>
+            <a href="Login" class="login-link">LOGIN</a>
+        </div>
+    </header>
+    <main>
+        
+
+        <div class="college-content">
+            <h2>Welcome To CBIT Alumni Association</h2>
+            <p>
+                Join the CBIT Alumni Association to stay connected, network with global peers, and give back to the
+                community that shaped your future. Be part of a legacy that continues to inspire and empower!
+            </p>
+            <button class="img-button" onclick="register()">REGISTER</button>
+            <!-- Add more content as needed -->
+        </div>
+        <section class="payment-job-section">
+            <!-- Payment Section -->
+            <div class="content-pair">
+                <div class="content-item">
+                    <a href="payments"><img src="https://razorpay.com/blog-content/uploads/2021/01/v03.png"
+                            alt="Payment Image 1" class="section-image"></a>
+                    <h2>Support CBIT Alumni</h2>
+                    <p>Contribute to the growth of our community through donations. Scan the UPI code below to make
+                        a payment.</p>
+                </div>
+                <div class="job-posting-section">
+                    <a href="jobposting"><img src="https://xobin.com/wp-content/uploads/2021/08/JOB-POSTING.png"
+                            alt="Payment Image 2" class="section-image"></a>
+                    <h2>Job Postings</h2>
+                    <p>Explore the latest job opportunities posted by our alumni. Connect, apply, and advance your
+                        career with CBIT.</p>
+                </div>
+                <div class="Event">
+                    <h2>LATEST EVENT</h2>
+                    <h3>PAST</h3>
+
+                    <!-- First Event -->
+                    <div class="EventColumn">
+                        <p><span style="padding-right:10px;">DEC</span>Annual Alumni Meet-2023</p>
+                        <p><span style="padding-right:25px;">23</span>Chaitanya Bharathi Institute Of Technology</p>
+                    </div>
+
+                    <!-- Second Event -->
+                    <div class="EventColumn">
+                        <p><span style="padding-right:10px;">DEC</span>CBIT Alumni Meet-2022</p>
+                        <p><span style="padding-right:25px;">25</span>Open Air Auditorium CBIT-Campus</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="alumni-container">
+            <div class="alumni">
+                <img src="Timg_1.jpg" alt="Alumni 1" />
+                <h3>Mr.Kanaihya Goel</h3>
+                <p>Batch of 2021</p>
+                <p>Top Achiever in Computer Science</p>
+            </div>
+            <div class="alumni">
+                <img src="Timg2.jpg" alt="Alumni 2" />
+                <h3>Ms.Kavya Padala</h3>
+                <p>Batch of 2021</p>
+                <p>Top Achiever in AI&ML</p>
+            </div>
+            <div class="alumni">
+                <img src="Timg3.jpg" alt="Alumni 3" />
+                <h3>Mr.T.Laxmi Rohith</h3>
+                <p>Batch of 2021</p>
+                <p>Top Achiever in AI&ML</p>
+            </div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.QLaiWHlhjnUHvrpbP35RcgHaEK&pid=Api&P=0&h=180"
+                        alt="Alumni 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ytimg.com/vi/CFhsHLwj5_U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gUCgTMA8=&rs=AOn4CLAg6K7KQlItx2L4TP9nb-IqHl5MdA"
+                        alt="Alumni 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.cbit.ac.in/wp-content/uploads/2023/11/CBIT-ACM-Inuguration-01-scaled.jpg"
+                        alt="Alumni 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.cbit.ac.in/wp-content/uploads/2023/04/MAR-182023-IIIT-hyd-we-stood-in-the-1st-place-in-whole-india-it-was-national-level-competition-in-their-fest-named-felicity-and-competition-named-zest-1024x576.jpeg"
+                        alt="Alumni 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ytimg.com/vi/8yFJrwQEtVU/maxresdefault.jpg" alt="Alumni 5">
+                </div>
+                <div class="gallery-item">https
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.QLaiWHlhjnUHvrpbP35RcgHaEK&pid=Api&P=0&h=180"
+                        alt="Alumni 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ytimg.com/vi/CFhsHLwj5_U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gUCgTMA8=&rs=AOn4CLAg6K7KQlItx2L4TP9nb-IqHl5MdA"
+                        alt="Alumni 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.cbit.ac.in/wp-content/uploads/2023/11/CBIT-ACM-Inuguration-01-scaled.jpg"
+                        alt="Alumni 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.cbit.ac.in/wp-content/uploads/2023/04/MAR-182023-IIIT-hyd-we-stood-in-the-1st-place-in-whole-india-it-was-national-level-competition-in-their-fest-named-felicity-and-competition-named-zest-1024x576.jpeg"
+                        alt="Alumni 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ytimg.com/vi/8yFJrwQEtVU/maxresdefault.jpg" alt="Alumni 5">
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://youtube.com/@chaitanyabharathiinstitute1268?si=XVKTd9_s2yy0amYZ" target="_blank" title="YouTube">
+                <i class="fa-brands fa-youtube"></i></i>
+            </a>
+            <a href="#" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://x.com/CBIThyd?t=MQDDdTcaVw_Gfh3uB9gLPg&s=09" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/cbithyderabad?igsh=MW1jazZkNDZzMXNqbA==" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 CBIT. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Gallery</title>
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+<body>
+    <div class="gallery-wrapper">
+        <h1 class="gallery-heading">Alumni Gallery</h1>
+        <div class="gallery-container">
+            {{#each images}}
+            <div class="gallery-item">
+                <img src="{{this.imageUrl}}" alt="{{this.alt}}" class="gallery-image" data-description="{{this.description}}">
+                <div class="description">{{this.title}}</div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <script src="Gallery.js"></script>
+</body>
+</html>

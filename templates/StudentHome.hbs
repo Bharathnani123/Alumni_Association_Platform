@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBIT | Alumni Association Platform</title>
+    <link rel="stylesheet" href="StudentHome.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.FMYqaQYIZGlFhT2YF4ucXQAAAA&pid=Api&P=0&h=180"
+                    alt="College Logo" class="logo">
+                <span class="college-name">CBIT |</span>
+                <span class="subtitle">Alumni Association Platform</span>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+            <div class="notification-container"></div>
+            <div class="notification-icon" onclick="toggleNotifications()">🔔<span id="unread-count"
+                    class="hidden">0</span></div>
+            <div id="notifications-dropdown" class="notifications-dropdown hidden">
+                <ul id="notification-list"></ul>
+            </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="menu">
+                <li><a href="#" id="profile-link">Profile</a></li>
+                <li><a href="SendMA">Send Messages</a></li>
+                <li><a href="jobposting">Job opportunities</a></li>
+                <li><a href="shareAcheivements">Share Acheivements</a></li>
+                <li><a href="payments">Donations</a></li>
+                <li><a href="Feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container"></div>
+        <!-- Welcome section -->
+        <section class="welcome-section">
+            <h1>Welcome back, {{studentName}}</h1> <!-- dynamically display student's name -->
+            <p class="description">Explore a world of opportunities tailored just for you. Discover the latest job
+                opportunities, connect with mentors, stay updated with the latest news, and engage in exciting upcoming
+                events. Celebrate achievements, contribute to donations, and make the most of your alumni experience.
+                Dive in and stay engaged with everything that matters to you!
+
+            </p>
+        </section>
+
+        <!-- Two sections side by side -->
+        <div class="content-sections">
+            <!-- Mentor Profiles Section -->
+            <div class="section mentor-profiles">
+                <h2>Mentor Profiles</h2>
+                <div class="mentor-section">
+                    <a href="javascript:void(0);" onclick="openMentorPopup()">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.uCpewbBBr7qksW_IM73gSQHaEA&pid=Api&P=0&h=180"
+                            alt="Mentor" class="profile-img" height="300" width="600">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Job Postings Section -->
+            <div class="section job-postings">
+                <h2>Latest Updates</h2>
+                <a href="latestUpdate" class="image-link">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.WBSGDq9D2CxrzDs-Mw2yBAHaEX&pid=Api&P=0&h=180"
+                        alt="Payment Image" class="profile-img" height="300" width="600">
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="content-sections">
+            <!-- Mentor Profiles Section -->
+            <div class="section mentor-profiles">
+                <h2>Acheivements</h2>
+                <div class="mentor-section">
+                    <a href="displayAcheivements">
+                        <img src="https://quotefancy.com/media/wallpaper/3840x2160/2093344-Denis-Waitley-Quote-The-greatest-achievement-is-to-outperform.jpg"
+                            alt="Mentor" class="profile-img" height="300" width="600">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Job Postings Section -->
+            <div class="section job-postings">
+                <h2>Upcoming Events</h2>
+                <a href="/events/upcome" class="image-link">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.M-Xrl0hHEqEF7eom1F8bAQHaDZ&pid=Api&P=0&h=180"
+                        alt="Payment Image" class="profile-img" height="300" width="600">
+                </a>
+            </div>
+        </div>
+        </div>
+       
+        </div>
+        <div id="mentor-popup" class="popup">
+            
+            <div class="popup-content">
+                <span class="close" onclick="closeMentorPopup()">&times;</span>
+                <h2>Mentor Profiles</h2>
+                <div id="mentor-container" class="mentor-container">
+                    <!-- Mentor profiles will be dynamically inserted here -->
+
+                </div>
+            </div>
+        </div>
+
+        <!--Profile-->
+        <div id="profile-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>User Profile</h2>
+                <div class="profile-details">
+                    <img src="/uploads/{{image}}" alt="Alumni Image">
+                    <p id="displayName"><strong>Name:</strong> {{name}}</p>
+                    <p><strong>Email:</strong> {{email}}</p>
+                    <p id="displayBatchYear"><strong>Batch Year:</strong> {{batchYear}}</p>
+                    <p id="displayDepartment"><strong>Department:</strong> {{department}}</p>
+                </div>
+                <button id="edit-button">Edit</button>
+            </div>
+        </div>
+
+        <!-- Edit Profile Popup -->
+        <div id="edit-profile-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Edit Profile</h2>
+                <form>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="{{profile.name}}" required>
+
+                    <label for="batchYear">Batch Year:</label>
+                    <input type="text" id="batchYear" name="batchYear" value="{{profile.batchYear}}" required>
+
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department" value="{{profile.department}}" required>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="StudentHome.js"></script>
+</body>
+
+</html>

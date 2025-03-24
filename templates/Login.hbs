@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login.css"/>
+</head>
+<body>
+    <form action="/Login" method="post">
+        <div class="input-container">
+            <h1>CBIT</h1>
+            <h1 style="color: #939185;">Log <span>In</span></h1>
+            <div class="input-group">
+                <input type="email" name="Email" required>
+                <label for="Email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required>
+                <label for="password">password</label>
+            </div>
+            <div id="adm-Msg">{{ loginMsg }}</div>
+            <button type="submit">Log In</button>
+            <hr>
+        </div>
+    </form>
+</body>
+</html>
